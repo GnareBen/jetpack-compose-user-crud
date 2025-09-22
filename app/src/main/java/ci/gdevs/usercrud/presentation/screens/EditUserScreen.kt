@@ -198,6 +198,7 @@ fun EditUserScreen(
                     CustomFormField(
                         value = firstName,
                         onValueChange = { firstName = it },
+                        enabled = !uiState.isLoading,
                         suportingText = {
                             Text(
                                 text = firstNameError,
@@ -215,6 +216,7 @@ fun EditUserScreen(
                     CustomFormField(
                         value = lastName,
                         onValueChange = { lastName = it },
+                        enabled = !uiState.isLoading,
                         suportingText = {
                             Text(
                                 text = lastNameError,
@@ -258,6 +260,7 @@ fun EditUserScreen(
                     CustomFormField(
                         value = email,
                         onValueChange = { email = it },
+                        enabled = !uiState.isLoading,
                         suportingText = {
                             Text(
                                 text = emailError,
@@ -276,6 +279,7 @@ fun EditUserScreen(
                     CustomFormField(
                         value = phoneNumber,
                         onValueChange = { phoneNumber = it },
+                        enabled = !uiState.isLoading,
                         suportingText = {
                             Text(
                                 text = phoneNumberError,
@@ -294,6 +298,7 @@ fun EditUserScreen(
                     CustomFormField(
                         value = address,
                         onValueChange = { address = it },
+                        enabled = !uiState.isLoading,
                         suportingText = {
                             Text(
                                 text = addressError,

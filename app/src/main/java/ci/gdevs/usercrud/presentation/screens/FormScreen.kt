@@ -80,8 +80,8 @@ fun FormScreen(
 
     LaunchedEffect(uiState.message, uiState.error) {
         if (uiState.message != null) {
-            snackbarHostState.showSnackbar(uiState.message ?: "")
             onNavigateBack()
+            snackbarHostState.showSnackbar(uiState.message ?: "")
         } else if (uiState.error != null) {
             snackbarHostState.showSnackbar(uiState.error ?: "")
         }
@@ -162,6 +162,7 @@ fun FormScreen(
 
                     CustomFormField(
                         value = firstName,
+                        enabled = !uiState.isLoading,
                         onValueChange = { firstName = it },
                         suportingText = {
                             Text(
@@ -185,6 +186,7 @@ fun FormScreen(
                     CustomFormField(
                         value = lastName,
                         onValueChange = { lastName = it },
+                        enabled = !uiState.isLoading,
                         suportingText = {
                             Text(
                                 text = lastNameError,
@@ -232,6 +234,7 @@ fun FormScreen(
                     CustomFormField(
                         value = email,
                         onValueChange = { email = it },
+                        enabled = !uiState.isLoading,
                         suportingText = {
                             Text(
                                 text = emailError,
@@ -250,6 +253,7 @@ fun FormScreen(
                     CustomFormField(
                         value = phoneNumber,
                         onValueChange = { phoneNumber = it },
+                        enabled = !uiState.isLoading,
                         suportingText = {
                             Text(
                                 text = phoneNumberError,
@@ -275,6 +279,7 @@ fun FormScreen(
                             )
                         },
                         isError = addressError.isNotEmpty(),
+                        enabled = !uiState.isLoading,
                         placeholder = "Adresse",
                         singleLine = true,
                         leadingIcon = {

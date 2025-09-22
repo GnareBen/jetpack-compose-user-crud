@@ -5,7 +5,6 @@ import androidx.room.RoomDatabase
 import ci.gdevs.usercrud.data.local.dao.UserDao
 import ci.gdevs.usercrud.data.local.entity.User
 
-
 @Database(
     entities = [User::class],
     version = 1,

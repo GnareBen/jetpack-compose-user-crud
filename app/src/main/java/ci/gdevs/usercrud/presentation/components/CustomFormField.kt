@@ -18,6 +18,7 @@ fun CustomFormField(
     value: String,
     onValueChange: (String) -> Unit,
     isError: Boolean = false,
+    enabled: Boolean = true,
     placeholder: String = "",
     keyboardType: KeyboardType = KeyboardType.Text,
     leadingIcon: @Composable (() -> Unit)? = null,
@@ -28,6 +29,7 @@ fun CustomFormField(
     OutlinedTextField(
         modifier = Modifier.fillMaxWidth().padding(4.dp),
         value = value,
+        enabled = enabled,
         onValueChange = onValueChange,
         supportingText = suportingText,
         isError = isError,
