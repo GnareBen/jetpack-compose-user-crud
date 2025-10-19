@@ -100,14 +100,6 @@ app/src/main/java/ci/gdevs/usercrud/
 └── ui/                   # Activité principale
 ```
 
-## 🎨 Captures d'Écran
-
-*[Ajoutez ici des captures d'écran de votre application]*
-
-## 📄 Licence
-
-Ce projet est sous licence [choisir une licence].
-
 ## 👨‍💻 Développeur
 
 Développé par [votre nom/organisation].
